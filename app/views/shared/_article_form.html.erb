@@ -1,0 +1,10 @@
+<%= form_for(@article) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<div class="field">
+		<%= f.label :タイトル %>
+		<%= f.text_area :title, placeholder: "タイトルの入力..." %>
+		<%= f.label :本文 %>
+		<%= f.text_area :content, placeholder: "本文の入力..." %>
+		<div><%= f.submit "新規作成", class: "btn btn-warning btn-lg" %></div>
+  </div>
+  <% end %>

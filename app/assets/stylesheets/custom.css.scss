@@ -1,7 +1,5 @@
 @import "bootstrap";
 
-
-
 html{
   overflow-y: scroll;
 }
@@ -109,5 +107,31 @@ p{
   &:hover{
     color: orange;
     text-decoration: none;
+  }
+}
+
+/*articles*/
+
+.articles {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  text-align: left;
+  color: black;
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
   }
 }
