@@ -2,11 +2,12 @@
 	<span class="title"><%= article.title %></span><br>
 	<span class="content"><%= article.content %></span><br>
 	<span class="timestamp">
-		Posted <%= time_ago_in_words(article.created_at) %> ago.
 	</span>
-	
-	 <%= link_to "削除", article, method: :delete,
-	 																data: { confirm: "Are You Sure?"},
-	 																title: article.content %>
-  
 </li>
+<div align="right">
+	<td><%= link_to 'コメント', article %>(<%= @article.comments.count %>)</td>
+	<td><%= link_to "削除", article, method: :delete,
+	 																data: { confirm: "Are You Sure?"},
+	 																title: article.content %></td>
+Posted <%= time_ago_in_words(article.created_at) %> ago.
+</div>

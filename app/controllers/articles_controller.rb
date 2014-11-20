@@ -2,6 +2,11 @@ class ArticlesController < ApplicationController
 	before_action :signed_in_user, only: [:create, :destroy]
 	before_action :correct_user, only: :destroy
 
+	def show
+		@article = Article.find(params[:id])
+    @id = params[:id]   
+  end
+
 	def create
 		@article = current_user.articles.build(article_params)
 		if @article.save

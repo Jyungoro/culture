@@ -9,6 +9,7 @@
       </div>
     </section>
   </aside>
+  <%= will_paginate @articles %>
   <div class="span8">
   	<% if @user.articles.any? %>
   	 <h3>Articles(<%= @user.articles.count %>)</h3>

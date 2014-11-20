@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   get 'users/new'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
+  
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :articles
+  has_many :comments, :through => :articles
 	validates :name, presence: true, length: { maximum: 50 }
 	has_secure_password
 	before_create :create_remember_token
