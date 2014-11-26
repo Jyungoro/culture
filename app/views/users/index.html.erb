@@ -1,9 +1,13 @@
 <% if current_user %>
-<%= link_to image_tag("mred.png"), user_path(1) %>
-<%= link_to image_tag("mred.png"), user_path(2) %>
-<%= link_to image_tag("mred.png"), user_path(3) %>
-<%= link_to image_tag("mred.png"), user_path(4) %>
-
+<%= link_to image_tag("saito.jpg"), user_path(1) %>
+<%= link_to image_tag("okano.jpg"), user_path(2) %>
+<%= link_to image_tag("morimoto.jpg"), user_path(3) %>
+<%= link_to image_tag("sugiyama.jpg"), user_path(4) %>
+<%= link_to image_tag("shirota.jpg"), user_path(5) %>
+<%= link_to image_tag("yamazaki.jpg"), user_path(6) %>
+<%= link_to image_tag("tanino.jpg"), user_path(7) %>
+<%= link_to image_tag("yamamoto.jpg"), user_path(8) %>
+<%= link_to image_tag("mred.png"), user_path(9) %>
 
 <% else %>
 <%= render :template => "sessions/new" %>

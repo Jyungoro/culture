@@ -68,7 +68,7 @@ h2{
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
   color: #999;
 }
@@ -112,13 +112,20 @@ p{
 
 /*articles*/
 
+
+.title {
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1;
+}
 .articles {
   list-style: none;
   margin: 10px 0 0 0;
 
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #6bb;
   }
 }
 .content {

@@ -1,6 +1,7 @@
 <li>
-	<span class="title"><%= article.title %></span><br>
-	<span class="content"><%= article.content %></span><br>
+	<span class="title"><%= article.title %></span><br><br>
+	<p><%= truncate(article.content, length: 100) %>
+		<%= link_to "もっと読む", article %></p>
 	<span class="timestamp">
 	</span>
 </li>
