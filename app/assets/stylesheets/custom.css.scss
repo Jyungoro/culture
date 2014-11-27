@@ -65,10 +65,10 @@ h1{
 }
 
 h2{
+  padding-top: 0px;
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: left;
   font-weight: normal;
   color: #999;
 }
@@ -90,6 +90,36 @@ p{
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+.saito {
+  margin: 5px;
+  width: 230px;
+  height: 300px;
+}
+
+.okano{
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.shirota{
+  margin: 5px;
+  height: 300px;
+}
+
+.yamazaki {
+  margin: 5px;
+  width: 430px;
+  height: 300px;
+}
+.yamamoto{
+  margin: 5px;
+  width: 350px;
+  height: 300px;
+}
+
+
 
 
 /*header*/

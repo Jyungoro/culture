@@ -1,13 +1,50 @@
 <% if current_user %>
-<%= link_to image_tag("saito.jpg"), user_path(1) %>
-<%= link_to image_tag("okano.jpg"), user_path(2) %>
-<%= link_to image_tag("morimoto.jpg"), user_path(3) %>
-<%= link_to image_tag("sugiyama.jpg"), user_path(4) %>
-<%= link_to image_tag("shirota.jpg"), user_path(5) %>
-<%= link_to image_tag("yamazaki.jpg"), user_path(6) %>
-<%= link_to image_tag("tanino.jpg"), user_path(7) %>
-<%= link_to image_tag("yamamoto.jpg"), user_path(8) %>
-<%= link_to image_tag("mred.png"), user_path(9) %>
+<table>
+	<tr>
+		<td class="ho">
+		<%= link_to image_tag("saito.jpg", class:"saito"), user_path(1) %>
+		<h2 align= "center">国際経営・斎藤利枝</h2></td>
+	<td class="ho">
+		<%= link_to image_tag("okano.jpg", class:"okano"), user_path(2) %>
+		<h2 align="center">スポ健・岡本美紗恵</h2></td>
+	<td class="ho">
+		<%= link_to image_tag("morimoto.jpg", class:"okano"), user_path(3) %>
+		<h2 align="center">理工・森本</h2></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td class="ho">
+		<%= link_to image_tag("sugiyama.jpg", class:"okano"), user_path(4) %>
+		<h2 align= "center">国際経営・杉山采子</h2></td>
+	<td class="ho">
+		<%= link_to image_tag("shirota.jpg", class:"shirota"), user_path(5) %>
+		<h2 align="center">経営・城田遊馬</h2></td>
+	<td class="ho">
+		<%= link_to image_tag("yamazaki.jpg", class:"yamazaki"), user_path(6) %>
+		<h2 align="center">情報理工・山崎</h2></td>
+	</tr>
+	</table>
+	<table>
+	<tr>
+		<td class="ho">
+		<%= link_to image_tag("tanino.jpg", class:"okano"), user_path(7) %>
+		<h2 align= "center">谷野</h2></td>
+	<td class="ho">
+		<%= link_to image_tag("yamamoto.jpg", class:"yamamoto"), user_path(8) %>
+		<h2 align="center">山本</h2></td>
+	<td class="ho">
+		<%= link_to image_tag("mred.png", class:"okano"), user_path(9) %>
+		<h2 align="center">生命・源</h2></td>
+	</tr>
+</table>
+
+
+
+
+
+
+
 
 <% else %>
 <%= render :template => "sessions/new" %>
