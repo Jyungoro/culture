@@ -1,6 +1,7 @@
 <div class="title">
     <h3><%= @article.title %></h3>
 </div><br><br><br><br>
+  <p><%= image_tag @article.image.thumb.url if @article.image? %></p>
   <p><%= @article.content %></p>
   <p align="right"><%= link_to 'Back', users_path, class: "btn btn-info"%></p>
 <br>
