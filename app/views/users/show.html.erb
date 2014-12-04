@@ -3,11 +3,9 @@
     <section>
       <h1><%= @user.name %>'s page</h1>
     </section>
-    <section>
-      <div>
-        <%= link_to "新規作成", new_article_path, class: "btn btn-warning btn-lg" %>
-      </div>
-    </section>
+    <p>
+          <%= link_to "新規作成", new_article_path, class: "btn btn-warning btn-lg"%>
+    </p>
   </aside>
   <%= will_paginate @articles %>
   <div class="span8">
@@ -16,7 +14,6 @@
   	 <ol class="articles">
   	 	<%= render @articles %>
   	 </ol>
-  	 <%= will_paginate @articles %>
   	 <% end %>
   </div>
 </div>

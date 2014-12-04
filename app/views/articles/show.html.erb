@@ -3,8 +3,8 @@
 </div><br><br><br><br>
   <p><%= image_tag @article.image.thumb.url if @article.image? %></p>
   <p><%= @article.content %></p>
-  <p align="right"><%= link_to 'Back', users_path, class: "btn btn-info"%></p>
-<br>
+  <p align="right"><%= link_to '戻る', users_path, class: "btn btn-info"%></p>
+<hr class="style-one">
 
 <h4>コメント</h4>
   <%=render :partial => @article.comments %>  
@@ -19,7 +19,7 @@
       <%= f.text_area :content, :size => "100x8"%>
     </div><br>
     <div class="actions">
-      <%= f.submit class: "btn btn-large btn-info"%>
+      <%= f.submit "コメント作成", class: "btn btn-large btn-info"%>
     </div>
   </div>
   <% end %>

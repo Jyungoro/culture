@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@articles = Article.paginate(page: params[:page])
     @id = params[:id]   
   end
 
