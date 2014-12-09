@@ -6,7 +6,7 @@
 	</span>
 </li>
 <div align="right">
-	<td><%= link_to 'コメント', article %>(<%= @article.comments.count %>)</td>
+	<td><%= link_to 'コメント', article %></td>
 	<td><%= link_to "削除", article, method: :delete,
 	 																data: { confirm: "Are You Sure?"},
 	 																title: article.content %></td>
