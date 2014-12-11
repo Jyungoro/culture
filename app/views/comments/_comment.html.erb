@@ -1,5 +1,5 @@
 <%= div_for comment do %>
 	<h2><%= comment.name %></h2>
-	<p><%= comment.content %></p>
+	<p><%= simple_format(comment.content) %></p>
 	<hr class="style-two">
 <% end %>
