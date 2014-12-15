@@ -1,5 +1,6 @@
 <%= div_for comment do %>
 	<h2><%= comment.name %></h2>
 	<p><%= simple_format(comment.content) %></p>
+	<div align="right">Posted <%= time_ago_in_words(comment.created_at) %> ago.</div>
 	<hr class="style-two">
 <% end %>
