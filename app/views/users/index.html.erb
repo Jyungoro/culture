@@ -1,9 +1,7 @@
 <% if current_user %>
 <div>
 	<div class="row">	
-		<div class="col-sm-1">
-		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-7">
 			<p class="newsfeed">投稿更新情報</p>
 			<% @articles.each do |article| %>
 				<% @name = article.user_id %>
