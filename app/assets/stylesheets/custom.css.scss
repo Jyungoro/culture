@@ -99,10 +99,18 @@ hr.style-two{
 }
 
 hr.style-three{
-  width: 400px;
-  margin: 0px;
+  width: 350px;
+  margin: 3px;
   border: 0;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed #6bb;
+    background: #999;
+}
+
+hr.style-four{
+  width: 450px;
+  margin: 3px;
+  border: 0;
+    border-bottom: 1px dashed #6bb;
     background: #999;
 }
 

@@ -3,11 +3,9 @@ class UsersController < ApplicationController
 
 
 	def index
-    @users = User.order("name")
-    @articles = Article.order("created_at")  
-    @comments = Comment.order("created_at DESC")
+   #@articles = Article.order("created_at")
     @articles = Article.paginate(page: params[:page], per_page: 8)
-    @comments = Comment.paginate(page: params[:page], per_page: 8)
+    @comments = Comment.paginate(page: params[:page], per_page: 8).reverse_order
 	end
 
   def show
