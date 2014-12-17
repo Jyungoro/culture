@@ -1,6 +1,9 @@
 <div class="title">
   <h3><%= @article.title %></h3>
 </div><br><br><br><br>
+  <% if @id == "5" then %>
+   <%= image_tag("shirota_pic.png", size: "300x500") %>
+  <% end %> 
   <p><%= image_tag @article.image.thumb.url if @article.image? %></p>
   <p><%= simple_format(@article.content) %></p>
   <p align="right"><%= link_to '戻る', users_path, class: "btn btn-info"%></p>

@@ -3,9 +3,10 @@ class ArticlesController < ApplicationController
 	before_action :correct_user, only: :destroy
 
 	def show
+		@id = params[:id] 
 		@article = Article.find(params[:id])
-		@articles = Article.paginate(page: params[:page])
-    @id = params[:id]   
+		@articles = Article.paginate(page: params[:page])  
+    #render text: "id = #{params[:id]}"
   end
 
 	def create

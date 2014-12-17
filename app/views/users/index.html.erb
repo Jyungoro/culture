@@ -1,9 +1,57 @@
 <% if current_user %>
-<div align="center">
-<h3>皆さんへのおねがい</h3>
-<p>サーバー側の問題で、画像がアップロードできなくなっていました。</p>
-<p>アップしたい画像があれば、こちらの<a href="mailto:sj0017vk&#64;ed.ritsumei.ac.jp">アドレス</a>まで送信お願いします。</p>
+<div>
+	<div class="row">
+		<div class="col-sm-1">
+		</div>
+		<div class="col-sm-5">
+			<p class="newsfeed">コメント更新情報</p>
+			<% @comments.each do |comment| %>
+				<div class="feeds">
+					<%= comment.name %>さんが
+					<%= link_to "コメント", controller: "articles", action: "show", id: comment.article_id %>しました。
+					<%= comment.created_at.strftime("%m/%d %H:%M") %>
+				</div>
+				<hr class="style-three">
+				<% end %>
+				<%= will_paginate @comments, previous_label: "←前へ", next_label: "次へ→" %>
+		</div>
+
+		<div class="col-sm-5">
+			<p class="newsfeed">投稿更新情報</p>
+			<% @articles.each do |article| %>
+				<% @name = article.user_id %>
+					<% case @name %>
+			<% when @name = 1 
+		  then @name = "斎藤" %>
+			<% when @name = 2
+			 then @name = "岡本" %>
+			<% when @name = 3 
+		  then @name = "森本" %>
+			<% when @name = 4
+			 then @name = "杉山" %>		
+			<% when @name = 5 
+		  then @name = "城田" %>
+			<% when @name = 6
+			 then @name = "山崎" %>
+			 <% when @name = 7
+			 then @name = "谷野" %>
+			<% when @name = 8 
+		  then @name = "山本" %>
+			<% when @name = 9
+			 then @name = "源" %>
+			<% end %>
+			<%= @name %>さんが<%= link_to article.title, controller: "articles", action: "show", id: article.id %>を投稿しました。
+			<%= article.created_at.strftime("%m/%d %H:%M") %>
+			<hr class="style-three">
+			<% end %>
+			<%= will_paginate @articles, previous_label: "←前へ", next_label: "次へ→" %>
+		</div>
+		<div class="col-sm-1">
+		</div>
+	</div>
 </div>
+
+<hr class="style-one">
 
 <table align="center">
 	<tr>
@@ -39,7 +87,8 @@
 		<%= link_to image_tag("mred.png", class:"okano"), user_path(9) %>
 		<h2 align="center">源康介</h2></td>
 	</tr>
-	</table>
+	</table>	
+
 <% else %>
 <%= render :template => "sessions/new" %>
 
